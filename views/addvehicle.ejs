@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Vehicle</title>
+</head>
+<body>
+    <h1>Add Vehicle</h1>
+    <form action="\addvehicle" method="POST">
+        <table>
+            <tr>
+                <td>
+                    <label for="vYear">Enter Vehicle Year:</label>
+                </td>
+                <td>
+                    <input id="vYear" type="text" name="vYear">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="vMake">Enter Vehicle Make:</label>
+                </td>
+                <td>
+                    <input id="vMake" type="text" name="vMake">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="vModel">Enter Vehicle Model:</label>
+                </td>
+                <td>
+                    <input id="vModel" type="text" name="vModel">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="vMileage">Enter Vehicle Mileage:</label>
+                </td>
+                <td>
+                    <input id="vMileage" type="text" name="vMileage">
+                </td>
+            </tr>
+        <br>
+        </table>
+            <input type="submit" value="Save">
+    </form>
+    <br>
+    <form action="\fleetlist"><input type="submit" value="Cancel"></form>
+</body>
+</html>

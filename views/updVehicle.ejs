@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Vehicle</title>
+</head>
+<body>
+    <h1>Update Vehicle Info</h1>
+    <span id="message"></span>
+    <form action="/updvehicle" method="POST">
+        <table>
+            <%console.log("Vehicle: ", vehicle);%>
+            <input type="hidden" name="id" value="<%=vehicle[0].id%>">
+            <tr>
+                <td>
+                    <label for="vehicleYear">Vehicle Year:</label>
+                </td>
+                <td>
+                    <input id="vehicleYear" type="text" name="vYear"
+                    value="<%=vehicle[0].vYear%>">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="vehicleMake">Vehicle Make:</label>
+                </td>
+                <td>
+                    <input id="vehicleMake" type="text" name="vMake"
+                    value="<%=vehicle[0].vMake%>">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="vehicleModel">Vehicle Model:</label>
+                </td>
+                <td>
+                    <input id="vehicleModel" type="text" name="vModel"
+                    value="<%=vehicle[0].vModel%>">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="vehicleMileage">Vehicle Mileage:</label>
+                </td>
+                <td>
+                    <input id="vehicleMileage" type="text" name="vMileage"
+                    value="<%=vehicle[0].vMileage%>">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Save">
+    </form>
+    <br>
+    <form action="\fleetlist"><input type="submit" value="Cancel"></form>    
+</body>
+</html>
