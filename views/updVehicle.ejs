@@ -3,13 +3,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Vehicle</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <h1>Update Vehicle Info</h1>
     <span id="message"></span>
     <form action="/updvehicle" method="POST">
         <table>
-            <%console.log("Vehicle: ", vehicle);%>
+            <!-- <%console.log("Vehicle: ", vehicle);%> -->
             <input type="hidden" name="id" value="<%=vehicle[0].id%>">
             <tr>
                 <td>

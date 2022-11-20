@@ -10,34 +10,32 @@
         }
     </style>
     <title>Fleet List</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="container col-10">
     <header>
-        <nav class="navbar navbar-expand-sm mb-3">
-            <div class="container-fluid">
-                <h1 class="navbar-brand col">Curtis Fleetlist</h1>
+        <nav>
+            <div>
+                <h1 class="display-5 mt-4">Curtis Fleetlist</h1>
             </div>
         </nav>
     </header>
     <div>
-        <main>
+        <main class="">
             <!--Use EJS to receive and format the SQLite Data-->
             <!--<h1>Fleet List</h1>-->
             <% {console.log("listing vehicles: " + fleetList.length);} %>
-            <table class="">
+            <table class="table table-borderless table-hover">
                 <thead>
                     <tr>
                         <th>
                             <!-- Add a form and button to go to add a vehicle route -->
                             <form method="GET" action="\addVehicle">
-                                <input type="submit" value="Add Vehicle">
+                                <input type="submit" class="btn btn-lg btn-outline-success" 
+                                    value="Add Vehicle">
                             </form>
                         </th>
                         <th >Year</th>
@@ -54,8 +52,8 @@
                                 <!-- Add a form and button on each row to edit the vehicle -->
                                 <form action="/updVehicle/<%= fleetList[i].id %>"
                                     method="get" id="udpVehicle" name="updVehicle">
-                                    <input type="submit" class="btn btn-outline-secondary" name="Edit"
-                                        value="Edit">
+                                    <input type="submit" class="btn btn-lg btn-outline-secondary" 
+                                        name="Edit" value="Edit">
                                 </form>
                             </td>
                             <td><%= fleetList[i].vYear %></td>
@@ -67,7 +65,7 @@
                                 <form action="/delVehicle/<%= fleetList[i].id %>"
                                     method="post" id="delVehicle<%=fleetList[i].id%>"
                                     name="delVehicle<%=fleetList[i].id%>">
-                                    <input type="button" class="btn btn-outline-secondary" name="Delete"
+                                    <input type="button" class="btn btn-lg btn-outline-danger" name="Delete"
                                         value="Delete" onclick="safeDelete('delVehicle<%=fleetList[i].id%>')">
                                 </form>
                             </td>

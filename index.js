@@ -11,6 +11,10 @@ let express = require("express"); //loads the exress link into the application
 /* we do things through and by the instance of Express */
 let app = express(); // object of type express
 
+//Static Files
+app.use(express.static('public'));
+app.use('/css', express.static(__dirname + 'public/css'));
+
 //post express 4.16, use
 app.use(express.urlencoded({ extended: true }));//whenever I do express stuff, this lets me put special chars in the url
 

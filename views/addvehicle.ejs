@@ -3,48 +3,51 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Add Vehicle</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <h1>Add Vehicle</h1>
+<body class="container col-4">
+    <h1 class="display-5 pt-4">Add Vehicle</h1>
     <form action="\addvehicle" method="POST">
         <table>
             <tr>
                 <td>
-                    <label for="vYear">Enter Vehicle Year:</label>
+                    <label for="vYear" class="form-label mb-2">Enter Vehicle Year:</label>
                 </td>
                 <td>
-                    <input id="vYear" type="text" name="vYear">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="vMake">Enter Vehicle Make:</label>
-                </td>
-                <td>
-                    <input id="vMake" type="text" name="vMake">
+                    <input id="vYear" type="text" name="vYear" class="form-input mb-2">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="vModel">Enter Vehicle Model:</label>
+                    <label for="vMake" class="form-label mb-2">Enter Vehicle Make:</label>
                 </td>
                 <td>
-                    <input id="vModel" type="text" name="vModel">
+                    <input id="vMake" type="text" name="vMake" class="form-input mb-2">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <label for="vMileage">Enter Vehicle Mileage:</label>
+                    <label for="vModel" class="form-label mb-2">Enter Vehicle Model:</label>
                 </td>
                 <td>
-                    <input id="vMileage" type="text" name="vMileage">
+                    <input id="vModel" type="text" name="vModel" class="form-input mb-2">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="vMileage" class="form-label mb-2">Enter Vehicle Mileage:</label>
+                </td>
+                <td>
+                    <input id="vMileage" type="text" name="vMileage" class="form-input mb-2">
                 </td>
             </tr>
         <br>
         </table>
-            <input type="submit" value="Save">
+        <input type="submit" class="mt-3 btn btn-outline-success" value="Save">
     </form>
     <br>
-    <form action="\fleetlist"><input type="submit" value="Cancel"></form>
+    <form action="\fleetlist"><input type="submit" class="btn btn-outline-secondary" value="Cancel"></form>
 </body>
 </html>
