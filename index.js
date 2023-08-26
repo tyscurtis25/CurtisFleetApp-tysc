@@ -13,7 +13,7 @@ let app = express(); // object of type express
 
 //Static Files
 app.use(express.static('public'));
-app.use('/css', express.static(__dirname + 'public/css'));
+// app.use('/css', express.static(__dirname + '/public/css'));
 
 //post express 4.16, use
 app.use(express.urlencoded({ extended: true }));//whenever I do express stuff, this lets me put special chars in the url
@@ -24,7 +24,7 @@ app.set("view engine", "ejs");//set the "view engine" to the value of "ejs"
 /* initialize the web server on specified port  */
 //tells what port to listen on, and has a callback function
 app.listen(listenPort, function () {
-    console.log("You hear that? It's the sound of the 'winds of change' on port " + listenPort)
+    console.log("You hear that? It's the the 'winds of change' on port " + listenPort)
 });
 
 /* UP TO THIS POINT, YOU NEED THIS CODE TO MAKE 
@@ -45,7 +45,7 @@ let knex = require("knex")({
 /*"get" defines a route for express (what you type in browser)
 then there's a callback function that says here's what I want
 you to do. Then the knex looks like a SQL query a bit. */
-app.get("/fleetlist", function (req, res) {
+app.get('/fleetlist', function (req, res) {
     knex.from("Vehicle").select("*").orderBy("vMake", "vModel", "vYear")
         .then(vehicles => { //this says then create a vehicle called variables
             console.log("Vehicles: " + vehicles.length); //console says how many vehicles we have

@@ -1,59 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Update Vehicle</title>
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
-    <h1>Update Vehicle Info</h1>
+<body class="container col-4">
+    <h2 class="pt-4 text-center">Update Vehicle Info</h2>
     <span id="message"></span>
-    <form action="/updvehicle" method="POST">
-        <table>
-            <!-- <%console.log("Vehicle: ", vehicle);%> -->
-            <input type="hidden" name="id" value="<%=vehicle[0].id%>">
-            <tr>
-                <td>
-                    <label for="vehicleYear">Vehicle Year:</label>
-                </td>
-                <td>
+    <div class="fleet-form p-3">
+        <form action="/updvehicle" method="POST">
+            <div>
+                <!-- <%console.log("Vehicle: ", vehicle);%> -->
+                <input type="hidden" name="id" value="<%=vehicle[0].id%>" class="form-input mb-2">
+                <div>
+                    <label for="vehicleYear" class="form-label mb-2">Vehicle Year:</label>
                     <input id="vehicleYear" type="text" name="vYear"
-                    value="<%=vehicle[0].vYear%>">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="vehicleMake">Vehicle Make:</label>
-                </td>
-                <td>
+                    value="<%=vehicle[0].vYear%>" class="form-control mb-2">
+                </div>
+                <div>
+                    <label for="vehicleMake" class="form-label mb-2">Vehicle Make:</label>
                     <input id="vehicleMake" type="text" name="vMake"
-                    value="<%=vehicle[0].vMake%>">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="vehicleModel">Vehicle Model:</label>
-                </td>
-                <td>
+                    value="<%=vehicle[0].vMake%>" class="form-control mb-2">
+                </div>
+                <div>
+                    <label for="vehicleModel" class="form-label mb-2">Vehicle Model:</label>
                     <input id="vehicleModel" type="text" name="vModel"
-                    value="<%=vehicle[0].vModel%>">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="vehicleMileage">Vehicle Mileage:</label>
-                </td>
-                <td>
+                    value="<%=vehicle[0].vModel%>" class="form-control mb-2">
+                </div>
+                <div>
+                    <label for="vehicleMileage" class="form-label mb-2">Vehicle Mileage:</label>
                     <input id="vehicleMileage" type="text" name="vMileage"
-                    value="<%=vehicle[0].vMileage%>">
-                </td>
-            </tr>
-        </table>
-        <input type="submit" value="Save">
-    </form>
-    <br>
-    <form action="\fleetlist"><input type="submit" value="Cancel"></form>    
+                    value="<%=vehicle[0].vMileage%>" class="form-control mb-2">
+                </div>
+            </div>
+            <input type="submit" value="Save" class="mt-4 mb-4 btn btn-sm btn-outline-success">
+        </form>
+        <form action="\fleetlist"><input type="submit" value="Cancel" class="btn btn-sm btn-outline-danger"></form>    
+    </div>
 </body>
 </html>
